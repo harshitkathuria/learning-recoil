@@ -1,10 +1,10 @@
 import React from "react";
 import { useRecoilState } from "recoil";
-import todoListAtom from "../recoil/atom/todoAtom";
+import { todoListState } from "../recoil/atom/todoAtom";
 import "./todo.css";
 
 const TodoItem = ({ item }) => {
-  const [todoList, setTodoList] = useRecoilState(todoListAtom);
+  const [todoList, setTodoList] = useRecoilState(todoListState);
   const index = todoList.findIndex(listItem => listItem === item);
 
   const replaceItemAtIndex = (index, newTodo) => {

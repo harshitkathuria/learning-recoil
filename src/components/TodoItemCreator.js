@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useSetRecoilState } from "recoil";
-import todoListAtom from "../recoil/atom/todoAtom";
+import { todoListState } from "../recoil/atom/todoAtom";
 import "./todo.css";
 
 const TodoItemCreator = () => {
   const [inputValue, setInputValue] = useState("");
-  const setTodoList = useSetRecoilState(todoListAtom);
+  const setTodoList = useSetRecoilState(todoListState);
 
   const onChange = e => {
     setInputValue(e.target.value);
@@ -29,7 +29,7 @@ const TodoItemCreator = () => {
   return (
     <div className="todo-creator">
       <input
-        placeholder="Add Toto Item"
+        placeholder="Add Todo Item"
         type="text"
         value={inputValue}
         onChange={onChange}

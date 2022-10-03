@@ -1,8 +1,11 @@
 import { atom } from "recoil";
 
-const todoListAtom = atom({
-  key: "todoListState",
+export const todoListState = atom({
+  key: "TodoListState",
   default: []
 });
 
-export default todoListAtom;
+export const todoListFilterState = atom({
+  key: "TodoListFilter",
+  default: "Show All"
+});
