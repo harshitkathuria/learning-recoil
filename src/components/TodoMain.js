@@ -11,6 +11,7 @@ const TodoMain = () => {
     <div className="parent-container">
       <div>
         <TodoItemCreator />
+        {todoList.length > 0 && <h3>Todo List</h3>}
         {todoList.length > 0 && (
           <div className="todos-list">
             {todoList.map(todoItem => (
